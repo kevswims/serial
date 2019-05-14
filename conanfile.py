@@ -13,7 +13,7 @@ class WjwwoodserialConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
-    exports_sources = "*"
+    exports_sources = ("src/*", "include/*", "conanfile.py", "CMakeLists.txt", "examples/*")
 
     def build(self):
         cmake = CMake(self)
